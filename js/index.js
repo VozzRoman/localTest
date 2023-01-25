@@ -9,30 +9,30 @@ const object = {
 	name: 'Roma',
 	age: 37,
 	stat: true,
+	id: Date.now()
 
 }
 
 //-----localStorage function--------//
 
-
+console.log(object.id)
 
 buttonEl.addEventListener('click', onButton)
-buttonDel.addEventListener('click', onDeleteBth)
-let data = JSON.parse(localStorage.getItem(LOCAL__KEY));
-console.log(data)
-	
+buttonDel.addEventListener('click', onDeleteBth);
 
 function onDeleteBth() {
-	console.log('ok');
-
 	
-
-	//нажимая на кнопку ДЕЛИТ удалять обьекты с конца
-
-		
-
-
+	console.log('ok');
+	data = JSON.parse(localStorage.getItem(LOCAL__KEY));
+	const lastElement = data.length - 1;
+	data.splice(lastElement, 1);
+	
+	localStorage.setItem(LOCAL__KEY, JSON.stringify(data));
+	console.log(data);
+	// createMarkup();
+	
 }
+
 
 
 function onButton() {
@@ -60,6 +60,7 @@ function createMarkup() {
 			<p>${el.name}</p>
 			<p>${el.age}</p>
 			<p>${el.stat}</p>
+			<p>${el.id}</p>
 		</li>
 		`;
 	}).join('');

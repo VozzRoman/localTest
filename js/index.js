@@ -29,7 +29,7 @@ function onDeleteBth() {
 	
 	localStorage.setItem(LOCAL__KEY, JSON.stringify(data));
 	console.log(data);
-	// createMarkup();
+	createMarkup();
 	
 }
 
@@ -57,10 +57,10 @@ function createMarkup() {
 	const markUp = getLocal.map(el => {
 		return `
 		<li class='list__item'>
-			<p>${el.name}</p>
-			<p>${el.age}</p>
-			<p>${el.stat}</p>
-			<p>${el.id}</p>
+			<p class='name'>${el.name}</p>
+			<p class='age'>age: ${el.age}</p>
+			<p class='stat'>stat: ${el.stat}</p>
+			<p class='id'>id: ${el.id}</p>
 		</li>
 		`;
 	}).join('');

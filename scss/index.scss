@@ -1,0 +1,41 @@
+ul{
+   list-style: none;
+}
+
+h1, p, h2{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+
+.save__list {
+    display: flex;
+}
+
+.list__item {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    &:not(:last-child){
+        margin-right: 10px;
+    }
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.age {}
+
+.stat {}
+
+.id {}

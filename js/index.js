@@ -51,7 +51,7 @@ function onButton() {
 }
 createMarkup();
 function createMarkup() {
-
+	containerClear();
 	let getLocal = JSON.parse(localStorage.getItem(LOCAL__KEY));
 	console.log(getLocal);
 	const markUp = getLocal.map(el => {

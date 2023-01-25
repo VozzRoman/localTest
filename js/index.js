@@ -21,7 +21,7 @@ buttonEl.addEventListener('click', onButton)
 buttonDel.addEventListener('click', onDeleteBth);
 
 function onDeleteBth() {
-	
+	//удалить все обьекты с конца
 	console.log('ok');
 	data = JSON.parse(localStorage.getItem(LOCAL__KEY));
 	const lastElement = data.length - 1;
@@ -73,7 +73,7 @@ function containerClear() {
 }
 
 
-// function save(key, value) { // --функция отправки данных в локалСторадж
+
 
 // export function getData(){
 // 	const dataLocalStorage = localStorage.getItem(LOCAL__KEY);
@@ -101,5 +101,4 @@ function containerClear() {
 // }
 
 
-// const index = cartPageItem.findIndex(el => el.id === cartItem.id);
-// cartPageItem.splice(i, 1);
+
